@@ -1,4 +1,4 @@
-## GPU BSGS Collider v1.7.8
+## GPU BSGS Collider v1.7.9
 #### Cuda (Nvidia card only) and Windows x64
 ![alt text](x64/large-bitcoin-collider.png "Collider")<br />
 Forked from [Etayson/BSGS-cuda](https://github.com/Etayson/BSGS-cuda)<br />
@@ -99,40 +99,13 @@ After you have the arrays saved, you will need less RAM to launch. <br />
 Example range 64 bit:<br />
 Run test: ```Collider.exe -t 512 -b 72 -p 306 -pk 49dccfd96dc5df56487436f5a1b18c4f5d34f65ddb48cb5e0000000000000000 -pke 49dccfd96dc5df56487436f5a1b18c4f5d34f65ddb48cb5effffffffffffffff -w 30 -htsz 28 -pb 03c5bcdd76b64cbbd8212080fe5efa9bf577cdcaac9f5853b216e71723ec3aca19```<br />
 
-## Example work 64 bit:
+## Example work 64 bit range:
 ![alt text](x64/755.jpg "Example work")<br />
 - Solved Private keys will be saved to the **Found.txt** file!
 
-## Random mode:
-- For random mode, you need to create a Collider-Random.bat file 
-- The parameters for creating a baht file must correspond to the parameters of the saved table. 
-- If they do not match, instead of random, new bin tables will be created, and the timer will reload the Collider.
-
-### Help page Random.exe -h
-```
-C:\Users\User>Random.exe -h
-  Random for Collider    [OPTIONS...]
--h, --help             : Display this message
--t, --t                : Number of GPU threads, Default -t 512
--b, --b                : Number of GPU blocks,  Default -b 68
--p, --p                : Number of pparam,      Default -p 256
-
--pb, --pb              : Set single Public key (uncompressed or compressed)
-                       : Default (puzzle120): -pb 02CEB6CBBCDBDF5EF7150682150F4CE2C6F4807B349827DCDBDD1F2EFA885A2630
-
---range                : START:END Random between. Example --range 1111111:7777777
-                       : For puzzle120: --range 800000000000000000000000000001:ffffffffffffffffffffffffffffff
-
--w, --w                : Set number of baby items 2^ (-w 22  mean 2^22 points) Default -w 22
--htsz, --htsz          : Set number of HashTable 2^ , Default -htsz 26
--time, --time          : Time in seconds after how many to update the private key. Default -time 300
--n, --n                : How many random start private keys to generate? Default -n 1000
-
-Example: Random.exe -t 512 -b 72 -p 306 --range 800000000000000000000000000001:ffffffffffffffffffffffffffffff -w 30 -htsz 28 -pb 02CEB6CBBCDBDF5EF7150682150F4CE2C6F4807B349827DCDBDD1F2EFA885A2630 -time 300 -n 1000 
-```
-### Example of creating a bat file :
-![alt text](x64/example-bat.jpg "Example work create bat")<br />
-- For Start Run: ```Collider-Random.bat```
+## Random mode (-r 120 bit only TEST):
+- Change the parameters for your GPU
+- Run random ```Collider.exe -t 512 -b 72 -p 306 -w 30 -htsz 28 -r 120``` 
 
 ## Building
 - To compile the Cpllider you need [Purebasic v5.31](https://www.purebasic.com)
