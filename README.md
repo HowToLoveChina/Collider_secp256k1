@@ -106,6 +106,8 @@ Run test: ```Collider.exe -t 512 -b 72 -p 306 -pk 49dccfd96dc5df56487436f5a1b18c
 ## Random mode (-r 120 bit only TEST):
 - Change the parameters for your GPU
 - Run random ```Collider.exe -t 512 -b 72 -p 306 -w 30 -htsz 28 -r 120``` 
+## Example work random -r 120:
+![alt text](x64/120.jpg "Example work")<br />
 
 ## Building
 - To compile the Cpllider you need [Purebasic v5.31](https://www.purebasic.com)
