@@ -24,6 +24,7 @@ C:\Users\User>Collider.exe -h
 - RTX 3080 (10 GB) = 2.7 Ekeys/s
 - RTX 2070 ( 8 GB) = 1,7 Ekeys/s
 - 1 Ekeys = 1,000,000,000,000,000,000
+- For GPUs over 8 GB memory try Collider v1.8.0
 
 When using 5 or more GPUs, there is a decrease in the overall speed by -30%<br />
 In order not to lose speed, it is better to run window copies for each GPU with the -d 0 or -d 1 parameter ...
